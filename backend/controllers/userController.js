@@ -26,16 +26,16 @@ const transporter = nodemailer.createTransport({
 // Send email with a logo and consistent formatting
 const sendEmail = async (to, subject, name, bodyContent) => {
     const mailOptions = {
-        from: 'support@regaliastore.in', // Your domain email address
+        from: 'support@regaliastore.in',
         to,
         subject,
         html: `
-            <div style=" font-family: "Albert Sans", sans-serif; text-align: left;">
+            <div style="font-family: 'Albert Sans', sans-serif; text-align: left;">
                 <p>Dear ${name},</p>
                 <p>${bodyContent}</p>
                 <p>Thanks & Regards,<br>Team Regalia</p>
                 <div style="margin-top: 20px;">
-                    <img src=https://res.cloudinary.com/dctdggqv0/image/upload/v1728801751/logo_zz9twa.png alt="Logo" style="width: 80px; height: 80px;"/>
+                    <img src="https://res.cloudinary.com/dctdggqv0/image/upload/v1728801751/logo_zz9twa.png" alt="Logo" style="width: 80px; height: 80px;"/>
                 </div>
             </div>
         `
@@ -186,6 +186,12 @@ const resetPassword = async (req, res) => {
 
         // Update user's password
         await userModel.updateOne({ email }, { password: hashedPassword });
+
+        // Fetch user to get the name for the email
+        const user = await userModel.findOne({ email });
+        if (!user) {
+            return res.json({ success: false, message: "User does not exist" });
+        }
 
         // Send confirmation email
         const subject = 'Password Reset Successful';
