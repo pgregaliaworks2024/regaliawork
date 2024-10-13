@@ -14,7 +14,7 @@ const createToken = (id) => {
 
 // Configure Nodemailer transport
 const transporter = nodemailer.createTransport({
-    host: 'smtp.regaliastore.in', // Your SMTP server
+    host: 'smtp.hostinger.com', // Your SMTP server
     port: 587, // Use 587 for TLS
     secure: false, // true for 465, false for other ports
     auth: {
@@ -30,12 +30,12 @@ const sendEmail = async (to, subject, name, bodyContent) => {
         to,
         subject,
         html: `
-            <div style="font-family: Arial, sans-serif; text-align: left;">
+            <div style=" font-family: "Albert Sans", sans-serif; text-align: left;">
                 <p>Dear ${name},</p>
                 <p>${bodyContent}</p>
                 <p>Thanks & Regards,<br>Team Regalia</p>
                 <div style="margin-top: 20px;">
-                    <img src="https://res-console.cloudinary.com/dctdggqv0/thumbnails/v1/image/upload/v1728801751/bG9nb196ejl0d2E=/preview" alt="Logo" style="width: 95px; height: 95px;"/>
+                    <img src=https://res.cloudinary.com/dctdggqv0/image/upload/v1728801751/logo_zz9twa.png alt="Logo" style="width: 80px; height: 80px;"/>
                 </div>
             </div>
         `
