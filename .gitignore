@@ -1,0 +1,7 @@
+admin/node_modules
+backend/node_modules
+frontend/node_modules
+
+admin/.env
+backend/.env
+frontend/.env
