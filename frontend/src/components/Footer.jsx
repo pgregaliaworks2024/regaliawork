@@ -29,20 +29,20 @@ const Footer = () => {
         <div>
           <p className='text-lg font-medium mb-4'>GET IN TOUCH</p>
           <ul className='flex flex-col gap-1 text-gray-600'>
-            <li>+1-212-456-7890</li>
-            <li>admin@regalia.com</li>
+            <li>+91 7055630479</li>
+            <li>support@regaliastore.in</li>
           </ul>
           {/* Social Media Links */}
           <div className='flex space-x-4 mt-4'>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className='hover:text-black transition'>
+            <a href="https://www.instagram.com/regaliastore.in" target="_blank" rel="noopener noreferrer" className='hover:text-black transition'>
               <FaInstagram size={24} />
             </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className='hover:text-black transition'>
+            {/* <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className='hover:text-black transition'>
               <FaYoutube size={24} />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className='hover:text-black transition'>
               <FaLinkedin size={24} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

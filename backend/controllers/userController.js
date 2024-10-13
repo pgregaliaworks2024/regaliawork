@@ -14,17 +14,19 @@ const createToken = (id) => {
 
 // Configure Nodemailer transport
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // or any other email service
+    host: 'smtp.regaliastore.in', // Your SMTP server
+    port: 587, // Use 587 for TLS
+    secure: false, // true for 465, false for other ports
     auth: {
-        user: process.env.EMAIL_USER, // your email address
-        pass: process.env.EMAIL_PASS  // your email password
+        user: 'support@regaliastore.in', // Your domain email address
+        pass: process.env.EMAIL_PASS  // Your email password
     }
 });
 
 // Send email with a logo and consistent formatting
 const sendEmail = async (to, subject, name, bodyContent) => {
     const mailOptions = {
-        from: process.env.EMAIL_USER,
+        from: 'support@regaliastore.in', // Your domain email address
         to,
         subject,
         html: `
@@ -215,6 +217,5 @@ const getUserProfile = async (req, res) => {
         res.status(500).json({ success: false, message: 'Server error' });
     }
 };
-
 
 export { loginUser, registerUser, adminLogin, requestPasswordReset, resetPassword, getUserProfile };
