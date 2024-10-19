@@ -23,7 +23,7 @@ const Career = () => {
         <div className="flex flex-col justify-center items-start gap-6 md:w-1/2">
           <p className="font-semibold text-xl text-gray-600">Our Location</p>
           <p className="text-gray-500">Jaipur, Rajasthan, IN</p>
-          <p className="text-gray-500">Tel: 91 705 563 0479 <br /> Email: hr@regalia.com</p>
+          <p className="text-gray-500">Tel: 91 705 563 0479 <br /> Email: support@regaliastore.in</p>
           <p className="font-semibold text-xl text-gray-600">Careers at Regalia</p>
           <p className="text-gray-500">Learn more about our teams and job openings.</p>
           <button 

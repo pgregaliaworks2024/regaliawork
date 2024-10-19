@@ -26,13 +26,14 @@ const Policy = () => {
       <h3 className="text-xl font-semibold mb-4">4. User Conduct:</h3>
       <p className="text-gray-600 text-base">
         When using our website, you agree not to:
+      </p>
         <ul className="list-disc list-inside">
           <li>Engage in any unlawful or fraudulent activity.</li>
           <li>Post or transmit any content that is harmful, abusive, or otherwise objectionable.</li>
           <li>Interfere with the operation of our website or disrupt the experience of other users.</li>
           <li>Misbehave with our support team. We expect all interactions to be respectful and constructive.</li>
         </ul>
-      </p>
+      
 
       <h3 className="text-xl font-semibold mb-4">5. User Data Protection:</h3>
       <p className="text-gray-600 text-base">
