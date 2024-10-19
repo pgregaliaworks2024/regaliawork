@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Collection from './pages/Collection';
 import About from './pages/About';
@@ -25,7 +25,6 @@ const App = () => {
       <ToastContainer />
       <Navbar />
       <SearchBar />
-      <TitleUpdater /> {/* Add the TitleUpdater component here */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collection />} />
@@ -44,30 +43,6 @@ const App = () => {
       <Footer />
     </div>
   );
-};
-
-// TitleUpdater Component to handle document title changes
-const TitleUpdater = () => {
-  const location = useLocation();
-
-  React.useEffect(() => {
-    const titles = {
-      '/': 'Regalia Store',
-      '/collection': 'Wardrobe - Regalia Store',
-      '/about': 'About Us - Regalia Store',
-      '/career': 'Career Opportunities - Regalia Store',
-      '/cart': 'Cart - Regalia Store',
-      '/login': 'Login - Regalia Store',
-      '/place-order': 'Place Your Order - Regalia Store',
-      '/orders': 'Your Orders - Regalia Store',
-      '/verify': 'Verify Your Account - Regalia Store',
-      '/policy': 'Policy - Regalia Store',
-    };
-
-    document.title = titles[location.pathname] || 'Regalia Store | IN'; // Set default title if path not found
-  }, [location]);
-
-  return null; // This component does not need to render anything
 };
 
 export default App;

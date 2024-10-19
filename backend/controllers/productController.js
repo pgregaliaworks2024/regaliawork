@@ -112,6 +112,4 @@ const addReview = async (req, res) => {
     }
 };
 
-
-// Function to get all reviews for a specific product
-export { addReview, listProducts, addProduct, removeProduct, singleProduct };
+export { addReview, listProducts, addProduct, removeProduct, singleProduct }
